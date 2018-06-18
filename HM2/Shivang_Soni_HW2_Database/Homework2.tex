@@ -1,0 +1,107 @@
+\documentclass{article}    
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage{lastpage}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{amssymb}
+
+\fancypagestyle{plain}{%
+\fancyhf{}%
+\lhead{ECS165A SQ18}
+\rhead{\today}
+\cfoot{Homework 2\\ \thepage\ of \pageref{LastPage} }
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{ECS165A SQ18}
+\rhead{\today}
+\cfoot{Homework 2\\ \thepage\ of \pageref{LastPage} }
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\begin{document}
+
+\title{Homework 2}
+\author{Name: YOUR NAME HERE\\SID: SID HERE}
+
+\maketitle
+
+Due 11:59PM May 2, 2018. {\bf READ ALL DIRECTIONS VERY CAREFULLY!} 
+Submit your tex files along with a generated PDF.
+You {\bf MUST} put each problem on a separate page with 1a on the first page, for example 1a will be on page 1 and 1b will be on page 2 (this template is already setup for this). Try to keep each answer to one page. 
+You {\bf MUST} put your name and student ID in the provided author section above. {\bf FAILURE TO DO SO MAY RESULT IN NO CREDIT!} 
+
+
+\section*{Problem 1}
+For this problem you will consider following relation and set of FDs:\\
+$R(A,B,C,D,E)$\\
+$B\rightarrow C$\\
+$BE\rightarrow D$\\
+$DC\rightarrow E$\\
+$DE\rightarrow A$\\
+
+\begin{enumerate}[label=\alph*.]
+\item What are the keys of $R$? {\bf (Show your closures)} \\
+{\bf \input{prob1a.tex} } \clearpage
+\item Show that the set of FDs is a minimal basis; if it is not a minimal basis find a minimal basis for the FDs.\\
+{\bf \input{prob1b.tex} } \clearpage
+\item What are all of the BCNF violations that follow from the FDs? {\bf (Don't just consider the listed FDs, but all that follow.)} \\
+{\bf \input{prob1c.tex} } \clearpage
+\item Decompose $R$ into BCNF. For each relation, list the keys, and make sure the set of FDs for each is a minimal basis.\\
+{\bf \input{prob1d.tex} } \clearpage
+\item What are all of the 3NF violations that follow from the FDs? {\bf (Don't just consider the listed FDs, but all that follow.)} \\
+{\bf \input{prob1e.tex} } \clearpage
+\item Decompose $R$ into 3NF. For each relation, list the keys, and make sure the set of FDs for each is a minimal basis. \\
+{\bf \input{prob1f.tex} } \clearpage
+\item What are all of the 4NF MVD violations that follow from the FDs? \\
+{\bf \input{prob1g.tex} } \clearpage
+\item Decompose $R$ into 4NF. For each relation, list the keys, FDs and MVDs. \\
+{\bf \input{prob1h.tex} } \clearpage
+\item If you project the relation $R$ onto $S(A,B,C)$ what nontrivial FDs and MVDs hold in $S$? \\
+{\bf \input{prob1i.tex} } \clearpage
+\end{enumerate}
+
+\section*{Problem 2} 
+For this problem you will consider following relation and set of FDs:\\
+$Courses(C,T,I,H,R,S,G)$\\
+$CT\rightarrow I$\\
+$TIH\rightarrow R$\\
+$THR\rightarrow C$\\
+$THS\rightarrow R$\\
+$CTS\rightarrow G$\\
+
+Where $C, T, I, H, R, S,$ and $G$ are the course, term, instructor, hour, room, student, and grade respectively. \\
+
+\begin{enumerate}[label=\alph*.]
+\item Use the chase test to prove/disprove that  $CTH\rightarrow G$ holds in Courses.\\
+{\bf \input{prob2a.tex} } \clearpage
+\item Use the chase test to prove/disprove that  $CTH\rightarrow R$ holds in Courses.\\
+{\bf \input{prob2b.tex} } \clearpage
+\item Use the chase test to prove/disprove that the proposed decomposition has a lossless join.\\
+$R_1(C, T, I, H)$\\
+$R_2(C, T, H, R, S)$\\
+$R_3(C, T, S, G)$\\
+{\bf \input{prob2c.tex} } \clearpage
+\item Decompose Courses into 3NF.\\
+{\bf \input{prob2d.tex} } \clearpage
+\item Which of your relations in 3NF are not in BCNF?\\
+{\bf \input{prob2e.tex} } \clearpage
+\item Which of your relations in 3NF are not in 4NF?\\
+{\bf \input{prob2f.tex} } \clearpage
+\end{enumerate}
+
+\section*{Problem 3}
+Design a academic genealogy database with one entity set: Academics. An academic's
+academic parent is their doctoral advisor, their grandparent is their doctoral
+advisor's advisor, etc. There are at least two other signators on a disertation
+other than the doctoral advisor. The information to record about academics 
+includes their birth name, date of birth, date of death (if deceased), field, 
+dissertation title, institution, doctoral advisor, second signer, third signer
+and any academic children.\\
+{\bf \input{prob3.tex} } \clearpage 
+
+\end{document}

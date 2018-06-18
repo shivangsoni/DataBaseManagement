@@ -1,0 +1,59 @@
+Problem 1a
+model : integer
+3002
+
+Problem 1b
+model : integer
+1101
+
+Problem 1c
+maker : string
+A
+
+Problem 1d
+city : float
+16
+
+Problem 1e
+maker : string
+C
+
+Problem 1f
+model : integer
+4902
+
+Problem 1g
+maker : string
+B
+
+Problem 1h
+maker : string
+B
+
+Problem 2a
+Result : boolean
+false
+
+Problem 2b
+Result : boolean
+false
+
+Problem 2c
+Result : boolean
+true
+
+Problem 2d
+Result : boolean
+false
+
+Problem 2e
+Result : boolean
+true
+
+Problem 2f
+Result : boolean
+true
+
+Problem 2g
+Result : boolean
+true

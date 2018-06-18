@@ -1,0 +1,39 @@
+% Problem 2d goes below
+Functional dependencies for the relation are:\\
+$CT \rightarrow I$\\
+$TIH \rightarrow R$\\
+$THS \rightarrow R$\\
+$THR \rightarrow C$\\
+$CTS \rightarrow G$\\
+
+for 3 NF decomposition we require:\\
+1.) Check to see if the FD's are in minimum basis\\
+2.) Left side is a super key or right side has prime attribute\\
+3.) Add all the FD's into the relation\\
+4.) Add the relation into 3NF if the current relations does not have super key and remove if any relation is the subset of another relation\\
+
+There are 2 FD's which does not voilates 3NF i.e.\\ 
+$TIH \rightarrow R$\\
+$THS \rightarrow R$\\
+
+All the FD's are minimal basis.\\ \\
+
+Key for the relation:\\
+$\{CT\}^+ = \{ C,T,I\}$ \\
+super key: $\{THS\}^+ = \{ T,H,S,C,R,G,I\}$ \\
+$\{THR\}^+ = \{ T,H,R,C,I,G\}$ \\
+$\{CTS\}^+ = \{ C,T,S,G,I\}$ \\
+
+R1(C,T,I)\\
+$CT \rightarrow I$\\ \\
+R2(T,I,H,R)\\
+$TIH \rightarrow R$\\ \\
+R3(T,H,S,R)\\
+$THS \rightarrow R$\\ \\
+R4(T,H,R,C)\\ 
+$THR \rightarrow C$\\ \\
+R5(C,T,S,G)\\
+$CTS \rightarrow G$\\
+
+
+So all the relations R1,R2,R3,R4,R5 are in 3NF.

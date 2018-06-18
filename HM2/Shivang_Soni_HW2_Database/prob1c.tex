@@ -1,0 +1,45 @@
+% Problem 1c goes below
+R(A,B,C,D,E)\\
+$B \rightarrow C$\\
+$BE \rightarrow D$\\
+$DC \rightarrow E$\\
+$DE \rightarrow A$\\
+
+
+For the above set of the functional dependencies the FD's that voilets are: \\ 
+$B \rightarrow C$\\
+$DC \rightarrow E$\\
+$DE \rightarrow A$\\
+
+now we must also consider all the functional dependencies that follows those listed above.\\
+
+For FD $B \rightarrow C$ find closure of the FD's that follows\\
+$\{AB\}^+ = \{ A,B,C\}$  --> this is a voilation\\
+$\{BE\}^+ = \{ A,B,C,D,E\}$ \\
+$\{BD\}^+ = \{ A,B,C,D,E\}$ \\
+
+thus $AB \rightarrow C$ FD also voilates BCNF \\
+
+For FD $DC \rightarrow E$ find closure of the FD's that follows\\
+$\{ACD\}^+ = \{ A,D,C,E\}$  --> this is a voilation\\
+$\{BCD\}^+ = \{ A,D,C,E,B\}$
+
+thus $ACD \rightarrow E$ FD also voilates BCNF \\
+
+
+
+
+For FD $DE \rightarrow A$ find closure of the FD's that follows\\
+$\{CDE\}^+ = \{ A,D,C,E\}$  --> this is a voilation\\
+$\{BCD\}^+ = \{ A,D,C,E,B\}$
+
+thus $CDE \rightarrow A$ FD also voilates BCNF \\
+
+All the functional dependencies with the voilations are:\\
+$CDE \rightarrow A$\\
+$ACD \rightarrow E$\\
+$AB \rightarrow C$\\
+$B \rightarrow C$\\
+$DC \rightarrow E$\\
+$DE \rightarrow A$\\
+$CD \rightarrow A$\\

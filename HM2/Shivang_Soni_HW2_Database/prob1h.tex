@@ -1,0 +1,29 @@
+% Problem 1h goes below
+ R1(B,C) \\
+ $B \rightarrow C$\\
+ $B \twoheadrightarrow C$\\
+ here in the above relation B is a key \\ \\
+ 
+ R2(A,B,D,E) \\ 
+ $BE \rightarrow D$\\
+ $DE \rightarrow A$\\
+ $BE \twoheadrightarrow D$\\
+ $DE \twoheadrightarrow A$\\
+ $BE \twoheadrightarrow A$\\
+ $DE \twoheadrightarrow B$\\
+ here key is BE as its closure gives all the attributes present in relation R2\\ \\
+ 
+ As from the relation R2 we have violation for all other FD's except BE is we will decompose R2\\ \\
+ 
+ R3(A,D,E)\\
+ $DE \rightarrow A$\\
+ $DE \twoheadrightarrow A$\\ \\
+ 
+ Here DE is the key for relation R3.\\ 
+ 
+ R4(E,D,B)\\
+ $BE \rightarrow D$\\
+ $BE \twoheadrightarrow D$\\ \\
+ Here BE is the key for relation R3.\\
+ 
+ The relations after decomposition are as follows:\\ R1(B,C) R3(A,D,E) R4(E,D,B)

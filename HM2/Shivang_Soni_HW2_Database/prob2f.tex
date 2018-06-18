@@ -1,0 +1,50 @@
+% Problem 2f goes below
+The below relation holds in 3NF:\\ \\
+R1(C,T,I)\\
+$CT \rightarrow I$\\ 
+R2(T,I,H,R)\\
+$TIH \rightarrow R$\\ 
+R3(T,H,S,R)\\
+$THS \rightarrow R$\\ 
+R4(T,H,R,C)\\ 
+$THR \rightarrow C$\\ 
+R5(C,T,S,G)\\
+$CTS \rightarrow G$\\
+
+4NF MVD's are :\\
+R1(C,T,I):\\
+$CT \rightarrow I$\\
+$CT \twoheadrightarrow I$\\
+
+R2(C,T,H,R,S,G):\\
+$CTS \rightarrow G$\\
+$THS \rightarrow R$\\
+$THR \rightarrow C$\\
+$CTS \twoheadrightarrow G$\\
+$THS \twoheadrightarrow R$\\
+$THR \twoheadrightarrow C$\\
+
+as THS is the key so other MVD's voilates decompose R2
+
+R3(T,C,S,G):\\
+$CTS \rightarrow G$\\
+
+R4(T,C,S,H,R):\\
+$THS \twoheadrightarrow R$\\
+$THR \twoheadrightarrow C$\\
+$THS \rightarrow R$\\
+$THR \rightarrow C$\\
+decompose R4 to R5 and R6\\
+
+R5(T,H,R,C):\\
+$THR \twoheadrightarrow C$\\
+
+R6(T,H,R,S):\\
+$THS \twoheadrightarrow R$\\
+
+
+So the 3NF relation not in 4NF is:\\
+R2(T,I,H,R),R3(T,H,S,R),R5(C,T,S,G) \\ 
+The relation which is in 3NF but not in 4NF is\\ 
+R2(T,I,H,R)\\
+$TIH \rightarrow R$\\ \\

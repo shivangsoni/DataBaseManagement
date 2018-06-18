@@ -1,0 +1,33 @@
+% Problem 2b goes below
+
+
+\begin{tabular}{ c | c | c | c | c | c | c }
+  $C$ & $T$ & $I$ & $H$ & $R$ & $S$ & $G$ \\ 
+  \hline\hline
+  $c$ & $t$ & $i_1$ & $h$ & $r_1$ & $s_1$ & $g$\\
+  \hline 
+  $c$ & $t$ & $i_2$ & $h$ & $r_2$ & $s_2$ & $g_2$\\
+\end{tabular}
+
+Apply $CT \rightarrow I$ FD we get:\\
+
+\begin{tabular}{ c | c | c | c | c | c | c }
+  $C$ & $T$ & $I$ & $H$ & $R$ & $S$ & $G$ \\ 
+  \hline\hline
+  $c$ & $t$ & $i_1$ & $h$ & $r_1$ & $s_1$ & $g$\\
+  \hline 
+  $c$ & $t$ & $i_1$ & $h$ & $r_2$ & $s_2$ & $g_2$\\
+\end{tabular}
+
+Apply $TIH \rightarrow R$ FD we get:\\
+
+\begin{tabular}{ c | c | c | c | c | c | c }
+  $C$ & $T$ & $I$ & $H$ & $R$ & $S$ & $G$ \\ 
+  \hline\hline
+  $c$ & $t$ & $i_1$ & $h$ & $r_1$ & $s_1$ & $g$\\
+  \hline 
+  $c$ & $t$ & $i_1$ & $h$ & $r_1$ & $s_2$ & $g_2$\\
+\end{tabular}
+
+
+Thus Chase test  proved that the dependency $CTH \rightarrow R$ holds in Courses

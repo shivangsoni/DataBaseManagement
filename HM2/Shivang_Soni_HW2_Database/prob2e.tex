@@ -1,0 +1,52 @@
+% Problem 2e goes below
+
+The relations which are in BCNF is just:\\
+$THS \rightarrow R$\\
+other then the above relation all other relations violates BCNF\\
+
+4 relations that violates are:\\
+$CT \rightarrow I$\\
+$TIH \rightarrow R$\\
+$THR \rightarrow C$\\
+$CTS \rightarrow G$\\
+
+now the relations are like:\\
+R1(C,T,I)\\
+$CT \rightarrow I$\\ 
+No FD voilates for this relation \\ 
+
+R2(C,T,H,R,S,G)\\
+$THR \rightarrow C$\\
+$CTS \rightarrow G$\\
+$THS \rightarrow R$\\ 
+Two FD's voilates for this relation i.e. \\
+$THR \rightarrow C$\\
+$CTS \rightarrow G$\\
+Decompose R2 into relation R3 and R4\\ 
+
+R3(C,T,S,G)\\
+$CTS \rightarrow G$\\ 
+No FD voilates for this relation \\ 
+
+
+R4(C,T,S,H,R)\\
+$THR \rightarrow C$\\
+$THS \rightarrow R$\\ 
+1 FD's voilates for this relation i.e. \\
+$THR \rightarrow C$\\
+Decompose R4 into relation R5 and R6\\ 
+
+
+R5(T,H,R,C)\\
+$THR \rightarrow C$\\ 
+No FD voilates for this relation \\ 
+
+R3(T,H,R,S)\\
+$THS \rightarrow R$\\ 
+No FD voilates for this relation \\ \\
+
+For BCNF R1,R3,R5,R6 holds.
+
+The relation which is in 3NF but not in BCNF is 
+R2(T,I,H,R)\\
+$TIH \rightarrow R$\\ \\

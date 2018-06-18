@@ -1,0 +1,37 @@
+% Problem 1g goes below
+% Use $\twoheadrightarrow$ for MVDs
+
+Firstly taking into account the functional dependencies that voilates BCNF are: \\ \\
+
+$B \rightarrow C$ \\
+$DC \rightarrow E$ \\
+$DE \rightarrow A$ \\
+$AB \rightarrow C$ \\
+$ACD \rightarrow E$\\
+$CDE \rightarrow A$\\
+Now For these FD's Corrosponding MVD's are:\\ \\
+These are the MVD voilations that follow from the FD's.
+
+Step 1:\\
+Apply promotion to the FD's that voilates BCNF \\
+$B \twoheadrightarrow C$\\
+$DC \twoheadrightarrow E$ \\
+$DE \twoheadrightarrow A$ \\ 
+$AB \twoheadrightarrow C$ \\ 
+$ACD \twoheadrightarrow E$\\
+$CDE \twoheadrightarrow A$\\ \\
+Step 2:\\
+Apply Complement \\
+$B \twoheadrightarrow ADE$\\
+$DC \twoheadrightarrow AB$ \\
+$DE \twoheadrightarrow BC$ \\
+$AB \twoheadrightarrow DE$ \\
+$ACD \twoheadrightarrow B$ \\
+$CDE \twoheadrightarrow B$ \\ \\
+
+Above are all the MVD voilations that follow from the FDs\\ \\
+
+
+
+
+

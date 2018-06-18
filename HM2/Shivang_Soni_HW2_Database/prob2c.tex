@@ -1,0 +1,59 @@
+% Problem 2c goes below
+
+R1(C,T,I,H)\\
+$CT \rightarrow I$\\ \\
+
+R2(C,T,H,R,S)\\
+$THR \rightarrow C$\\
+$THS \rightarrow R$\\ \\
+
+R3(C,T,S,G)\\
+$CTS \rightarrow G$ \\ \\ \\ 
+
+\begin{tabular}{ c | c | c | c | c | c | c }
+  $C$ & $T$ & $I$ & $H$ & $R$ & $S$ & $G$ \\ 
+  \hline\hline
+  $c$ & $t$ & $i$ & $h$ & $r_1$ & $s_1$ & $g_1$\\
+  \hline 
+  $c$ & $t$ & $i_2$ & $h$ & $r$ & $s$ & $g_2$\\
+  \hline 
+  $c$ & $t$ & $i_3$ & $h_3$ & $r_3$ & $s$ & $g$\\
+\end{tabular} \\
+
+Apply $CT \rightarrow I$ on relation R1 and R2 we get:\\
+
+\begin{tabular}{ c | c | c | c | c | c | c }
+  $C$ & $T$ & $I$ & $H$ & $R$ & $S$ & $G$ \\ 
+  \hline\hline
+  $c$ & $t$ & $i$ & $h$ & $r_1$ & $s_1$ & $g_1$\\
+  \hline 
+  $c$ & $t$ & $i$ & $h$ & $r$ & $s$ & $g_2$\\
+  \hline 
+  $c$ & $t$ & $i_3$ & $h_3$ & $r_3$ & $s$ & $g$\\
+\end{tabular} \\ \\
+Apply $THS \rightarrow R$ on relation R2 and R3 we get:\\
+
+\begin{tabular}{ c | c | c | c | c | c | c }
+  $C$ & $T$ & $I$ & $H$ & $R$ & $S$ & $G$ \\ 
+  \hline\hline
+  $c$ & $t$ & $i$ & $h$ & $r_1$ & $s_1$ & $g_1$\\
+  \hline 
+  $c$ & $t$ & $i$ & $h$ & $r$ & $s$ & $g_2$\\
+  \hline 
+  $c$ & $t$ & $i_3$ & $h_3$ & $r$ & $s$ & $g$\\
+\end{tabular} \\
+
+Apply $CTS \rightarrow G$ on relation R2 and R3 we get:\\
+
+\begin{tabular}{ c | c | c | c | c | c | c }
+  $C$ & $T$ & $I$ & $H$ & $R$ & $S$ & $G$ \\ 
+  \hline\hline
+  $c$ & $t$ & $i$ & $h$ & $r_1$ & $s_1$ & $g_1$\\
+  \hline 
+  $c$ & $t$ & $i$ & $h$ & $r$ & $s$ & $g$\\
+  \hline 
+  $c$ & $t$ & $i_3$ & $h_3$ & $r$ & $s$ & $g$\\
+\end{tabular} \\
+
+
+Thus Chase test  prove that proposed decomposition has lossless join\\

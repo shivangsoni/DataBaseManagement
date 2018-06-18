@@ -1,0 +1,21 @@
+% Problem 1b goes below
+. \\ \\ \\
+$\{B\}^+ = \{ B\}$ \\
+$\{B,E\}^+ = \{ C,B,E\}$ \\
+$\{D,C\}^+ = \{ D,C\}$ \\
+$\{D,E\}^+ = \{ D,E\}$ \\ \\
+
+Try to remove the attributes from the functional dependencies and make sure if the RHS attribute can be reached. \\ \\ \\
+
+From the relation $BE -> D$\\
+Try removing E$\{B\}^+ = \{B,C\}$ \\
+Try removing B$\{E\}^+ = \{ E\}$ \\ \\ \\
+Similarly, From the relation $DC -> E$\\
+Try removing D$\{C\}^+ = \{C\}$ \\
+Try removing C$\{D\}^+ = \{ D\}$ \\ \\ \\
+
+and also From the relation $DE -> A$\\
+Try removing D$\{E\}^+ = \{E\}$ \\
+Try removing E$\{D\}^+ = \{D\}$ \\
+
+Means the FD's is a minimal basis.
