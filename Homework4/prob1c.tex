@@ -1,0 +1,139 @@
+% Problem 1c goes below
+$Student(\underline{SID}, Surname, Prefname, \underline{Email})$
+
+Non-trivial functional dependencies expected to hold are
+
+$SID \rightarrow Surname, Prefname, Email$\\
+$Email \rightarrow Surname,Prefname,SID$
+
+Non-trivial multivalue dependencies expected to hold are
+
+$Surname \twoheadrightarrow Prefname$\\
+$Prefname \twoheadrightarrow Surname$
+
+---------------------------------------------------------------------------
+
+$AcademicInfo(Level, \underline{Email}, Major, \underline{SID}, Class)$
+
+For relation AcademicInfo, non-trivial functional dependencies expected to hold are
+
+$Class \rightarrow Level$\\
+$SID \rightarrow Email,Surname,Prefname$\\
+$Email \rightarrow SID,Surname,Prefname$
+
+Non-trivial multivalue dependencies expected to hold are
+
+$Class \twoheadrightarrow Level$\\
+$Class \twoheadrightarrow Email, Major, SID$\\
+$SID \twoheadrightarrow Email,Surname,Prefname$\\
+$Email \twoheadrightarrow SID,Surname,Prefname$
+
+---------------------------------------------------------------------------
+
+$CourseStudent(Seat, Grade, Status, \underline{SID}, \underline{CID}, \underline{Email}, \underline{Term}, Units)$
+
+Non-trivial functional dependencies expected to hold in  relation CourseStudent are
+
+$Grade \rightarrow Status$\\
+$CID \rightarrow Units$\\
+$SID \rightarrow Email$\\
+$Email \rightarrow SID$\\
+$SID,CID,Email,Term \rightarrow Seat,Grade,Status,Units$
+
+
+The multivalue dependencies expected to hold are
+
+$Grade \twoheadrightarrow Status$\\
+$Grade \twoheadrightarrow Seat, Grade, SID, CID, Email, Term, Units$\\
+$CID \twoheadrightarrow Units$\\
+$CID \twoheadrightarrow Seat, Grade, Status, SID, Email, Term$\\
+$SID \twoheadrightarrow Email$\\
+$SID \twoheadrightarrow Seat, Grade, Status, CID, Term, Units$\\
+$Email \twoheadrightarrow SID$\\
+$Email \twoheadrightarrow Seat, Grade, Status, CID, Term, Units$\\
+$SID,CID,Email,Term \twoheadrightarrow Seat,Grade,Status,Units$
+
+---------------------------------------------------------------------------
+
+$Course(\underline{CID}, \underline{Term}, Sec)$
+
+In this relation, only one functional dependency will hold
+
+$CID, Term \rightarrow Sec$
+
+Then the multivalue dependency that should hold is
+
+$CID, Term \twoheadrightarrow Sec$
+
+---------------------------------------------------------------------------
+
+$CourseAdministrative(MinUnits, MaxUnits, Subj, Crse, \underline{CID}, \underline{Term})$
+
+Functions dependencies expected to hold in relation CourseAdministrative are
+
+$CID \rightarrow MinUnits,MaxUnits,Subj, Crse$\\
+$Crse \rightarrow MinUnits, MaxUnits$\\
+$CID,Term \rightarrow Subj,Crse,MinUnits,MaxUnits$
+
+Multivalue dependencies that should hold then are
+
+$CID \twoheadrightarrow MinUnits$\\
+$CID \twoheadrightarrow MaxUnits$\\
+$CID \twoheadrightarrow Subj$\\
+$CID \twoheadrightarrow Crse$\\
+$CID \twoheadrightarrow MinUnits, MaxUnits$\\
+$CID \twoheadrightarrow MinUnits, Subj$\\
+$CID \twoheadrightarrow MinUnits, Crse$\\
+$CID \twoheadrightarrow MaxUnits, Subj$\\
+$CID \twoheadrightarrow MaxUnits, Crse$\\
+$CID \twoheadrightarrow Subj, Crse$\\
+$CID \twoheadrightarrow MinUnits, MaxUnits, Subj$\\
+$CID \twoheadrightarrow MinUnits, MaxUnits, Crse$\\
+$CID \twoheadrightarrow MaxUnits, Subj, Crse$\\
+$CID \twoheadrightarrow MinUnits, MaxUnits, Subj, Crse$\\
+
+$CID \twoheadrightarrow MaxUnits, Subj, Crse, Term$\\
+$CID \twoheadrightarrow MinUnits, Subj, Crse, Term$\\
+$CID \twoheadrightarrow MinUnits, MaxUnits, Crse, Term$\\
+$CID \twoheadrightarrow MinUnits, MaxUnits, Subj, Term$\\
+$CID \twoheadrightarrow Subj, Crse, Term$\\
+$CID \twoheadrightarrow MaxUnits, Crse, Term$\\
+$CID \twoheadrightarrow MaxUnits, Subj, Term$\\
+$CID \twoheadrightarrow MinUnits, Crse, Term$\\
+$CID \twoheadrightarrow MinUnits, Subj, Term$\\
+$CID \twoheadrightarrow MinUnits, MaxUnits, Term$\\
+$CID \twoheadrightarrow Crse, Term$\\
+$CID \twoheadrightarrow Subj, Term$\\
+$CID \twoheadrightarrow MinUnits, Term$\\
+$CID \twoheadrightarrow Term$\\
+
+$Crse \twoheadrightarrow MinUnits$\\
+$Crse \twoheadrightarrow MaxUnits$\\
+$Crse \twoheadrightarrow MinUnits, MaxUnits$\\
+
+$Crse \twoheadrightarrow MaxUnits, Subj, Term$\\
+$Crse \twoheadrightarrow MinUnits, Subj, Term$\\
+$Crse \twoheadrightarrow Subj, Term$\\
+
+$CID,Term \twoheadrightarrow Subj,Crse,MinUnits,MaxUnits$
+---------------------------------------------------------------------------
+
+$Meeting(CID, Term, Instructor, Type, Days, Time, Build, Room)$
+
+No functional dependencies or multivalued dependencies are expected to hold for the following relation. This is because there are many possibilities of a repeated course being taught in the same term by the same instructor. Days, time, build, and room have many possibilities which also creates many possibilities. Therefore, the only function dependency expected to hold is all attributes together. 
+
+There are many multivalue dependencies that are expected to hold for this relation. The attributes in this relation have so many possible combinations that there are $2^{8}$ multivalue dependencies that could hold. Some example multivalue dependencies expected to hold are
+
+$CID \twoheadrightarrow Term, Instructor, Type, Days, Time, Build, Room$\\
+$Term \twoheadrightarrow CID, Term, Type, Days, Time, Build, Room$\\
+$Instructor \twoheadrightarrow CID,Term,Type,Days,Time,Build,Room$\\
+$Type \twoheadrightarrow CID,Term,Instructor,Days,Time,Build,Room$\\
+$Days \twoheadrightarrow CID, Term, Instructor, Type, Time, Build, Room$
+$Time \twoheadrightarrow CID,Term,Type,Days,Days,Build,Room$\\
+$Build \twoheadrightarrow CID,Term,Instructor,Type,Days,Time,Room$\\
+$Room \twoheadrightarrow CID,Term,Instructor,Type,Days,Time, Build$\\
+$CID,Term \twoheadrightarrow Instructor$\\
+$CID, Instructor \twoheadrightarrow Term$\\
+$CID,Term,Type,Days,Time,Build,Room \twoheadrightarrow Instructor$\\
+$Instructor,Term,Type,Days,Time,Build,Room \twoheadrightarrow CID$\\
+

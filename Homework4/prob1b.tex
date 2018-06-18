@@ -1,0 +1,29 @@
+% Problem 1b goes below
+Relations for ER Diagram:\\
+$Student(\underline{SID}, Surname, Prefname, \underline{Email})$\\
+$AcademicInfo(Level, \underline{Email}, Major, \underline{SID}, Class)$\\
+$CourseStudent(Seat, Grade, Status, \underline{SID}, \underline{CID}, \underline{Email}, \underline{Term}, Units)$\\
+$Course(\underline{CID}, \underline{Term}, Sec)$\\
+$CourseAdministrative(MinUnits, MaxUnits, Subj, Crse, \underline{CID}, \underline{Term})$\\
+$Meeting(CID, Term, Instructor, Type, Days, Time, Build, Room)$
+ 
+ 
+ For the relation Student:\\
+  This relation has 4 attributes: SID stored as type Integer, Surname stored as type varchar, Prefname stored as type varchar, and Email stored as type varchar where SID and Email are primary keys.\\
+  
+ For the relation AcademicInfo(Stores level,class and major of student):\\
+  This relation has 5 attributes: Level stored as type varchar, SID stored as type Integer, Class stored as type varchar, Major stored as type varchar, and Email stored as type varchar where SID and Email are primary keys.\\
+  
+ For the relation CourseStudent(This determines relation between two entities student and course):\\
+  This relation has 8 attributes:  SID stored as type Integer, Email stored as type varchar, Seat stored as type Integer, CID stored as type varchar,Grade stored as type varchar,Status stored as type varchar,Term stored as varchar. and Units stored as type float.\\
+  
+ For the relation Course:\\
+ This relation has 3 attributes: CID stored as type varchar, Term stored as type integer, and Sec stored as type varchar.\\
+ 
+ For the relation CourseAdministrative(stores more details of course):\\
+ This relation has 6 attributes: CID stored as type varchar, Term stored as type integer, Subj stored as type varchar,MinUnits stored as float,MaxUnits stored as float, and Crse stored as varchar.\\
+  
+ 
+  For the relation Meeting(Stores detail about the lecture hall,instructor etc):\\
+ This relation has 8 attributes: CID stored as type varchar, Term stored as type integer, Instructor stored as type varchar,Type stored as varchar, Days stored as varchar ,Build stored as varchar,Time stored as varchar, and Room stored as varchar.\\
+ 
